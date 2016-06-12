@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:panel header="Cadastro Lance">
+                <p:outputLabel value="Leilao: " />
+                <p:outputLabel  value="codLeilao " />
+
+            
+                    <p:fieldset legend="Bens do Leilão" style="margin-bottom:20px">
+
+                        <p:dataTable var="codigoLance" value="#{dtBasicView.cars}">
+                            <p:column headerText="Nome">
+                                <h:outputText value="#{car.id}" />
+                            </p:column>
+
+                            <p:column headerText="Categoria">
+                                <h:outputText value="#{car.year}" />
+                            </p:column>
+
+                            <p:column headerText="Descrição">
+                                <h:outputText value="#{car.brand}" />
+                            </p:column>
+
+
+                        </p:dataTable>
+
+
+                    </p:fieldset>
+                    <p:fieldset legend="Valores Lote" style="margin-bottom:20px">
+                        <h:panelGrid columns="2" cellpadding="5">
+                            <p:outputLabel for="valorMinimoLote" value="Valor Mínimo Lote: " />
+                            <p:inputText id="valorMinimoLote"></p:inputText>
+
+                            <p:outputLabel for="valorMaximoLote" value="Valor Máximo Lote: " />
+                            <p:inputText id="valorMaximoLote"></p:inputText>
+                            <p:outputLabel  value="" />
+                            <p:button value="concluir" icon="ui-icon-star">
+                                <f:param name="concluir" value="10" />
+                            </p:button>
+
+                        </h:panelGrid>
+                    </p:fieldset>
+                        <p:button value="Efetuar Lance" icon="ui-icon-star">
+                            <f:param name="efetuarLance" value="10" />
+                        </p:button>
+            a</p:panel>
+
+        </h:form>
+
+    </h:body>
+</html>
+
+
+

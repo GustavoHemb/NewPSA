@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <a href="CadastroLeilao.xhtml"></a>
+    <h:body>
+        
+                <h:form>
+                    <p:panel header="Cadastro de Leilão">
+                        <p:outputLabel value="Usuário: " />
+                        <p:outputLabel  value="codUsuario " />
+                    <h:panelGrid columns="2" cellpadding="5">
+                        <p:outputLabel for="dataInicial" value="Data inicial: " />
+                        <p:inputText id="dataInicial"></p:inputText>
+                        <p:outputLabel for="dataFinal" value="Data Final: " />
+                        <p:inputText id="dataFinal"></p:inputText> 
+                    </h:panelGrid>
+                    
+                    <h:panelGrid columns="2" cellpadding="5">
+                        <p:outputLabel for="horaInicial" value="Hora Inicial: " />
+                        <p:inputText id="horaInicial"></p:inputText>
+                        <p:outputLabel for="horaFinal" value="Hora Final: " />
+                        <p:inputText alt="hora final" id="horaFinal"></p:inputText> 
+                    </h:panelGrid>
+                    
+                    <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
+
+                        <p:outputLabel for="console" value="Tipo:" />
+                        <p:selectOneRadio id="console">
+                            <f:selectItem itemLabel="aberto" itemValue="Aberto" />
+                            <f:selectItem itemLabel="Fechado" itemValue="fechado" />
+                        </p:selectOneRadio>
+                        <p:outputLabel for="lote" value="Lote:" />
+                        <p:selectOneMenu id="lote" value="lote" style="width:150px">
+                            <f:selectItem itemLabel="Selecione..." itemValue="" />
+                            <f:selectItem itemLabel="Lote A" itemValue="Lote A" />
+                            <f:selectItem itemLabel="Lote B" itemValue="Lote B" />
+                            <f:selectItem itemLabel="Lote C" itemValue="Lote C" />
+                            <f:selectItem itemLabel="Lote B" itemValue="Lote D" />
+                        </p:selectOneMenu>
+
+                     
+                        
+                    </h:panelGrid>
+                   
+                 </p:panel>   
+                </h:form>
+                
+        
+    </h:body>
+</html>
+
